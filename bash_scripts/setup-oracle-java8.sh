@@ -1,12 +1,13 @@
 #!/bin/bash
 
 # Download Oracle Java 8 accepting the license
-wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-http://download.oracle.com/otn-pub/java/jdk/8u112-b15/server-jre-8u112-linux-x64.tar.gz
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" \
+http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.tar.gz
+
 # Extract the archive
-tar -xzvf server-jre-*.tar.gz
+tar -xzvf jdk-*-linux-x64.tar.gz
 # clean up the tar
-rm -fr server-jre-8u112-linux-x64.tar.gz
+rm -fr jdk-*-linux-x64.tar.gz
 # mk the jvm dir
 sudo mkdir -p /usr/lib/jvm
 # move the server jre
